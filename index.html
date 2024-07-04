@@ -1,0 +1,135 @@
+<html>
+    <body>
+
+        <head>
+            <style>
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+
+                :root {
+                    --amarelo: #f2b705;
+                    --laranja: #d97904;
+                    --vermelho-claro: #bf2604;
+                    --vermelho-escuro: #730202;
+                    --marrom: #260101;
+                }
+
+                header {
+                    background-color: var(--vermelho-escuro);
+                    text-align: center;
+                    color: beige;
+                    padding: 20px 0;
+                }
+
+                .lista-cadastro {
+                    display: flex;
+                    margin: 20px 0;
+                    padding: 0 20px;
+                }
+
+                .lista-cadastro input[type=text] {
+                    flex:1;
+                    height: 40px;
+                    padding-left: 10px;
+                }
+
+                .lista-cadastro input[type=number] {
+                    padding-left: 10px;
+                }
+
+                .lista-cadastro input[type=submit] {
+                    /* height: 50px; */
+                    /* width: 70px; */
+                    /* margin: 0 40px; */
+                    padding: 5px;
+                    color: beige;
+                    background-color: var(--marrom);
+                    /* border-radius: 20px; */
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                .lista-cadastro input[type=submit]:hover {
+                    transition: .2s;
+                    background-color: var(--vermelho-claro);
+                }
+
+                .lista-produtos-single {
+                    padding: 20px 0;
+                    border-bottom: 1px solid #ccc;
+                    display: flex;
+                }
+
+                .lista-produtos-single h3{
+                    flex:1;
+                    padding: 0 20px;
+                    /* color: beige; */
+                }
+
+                h3.price-produto {
+                    text-align: right;
+                    font-size: 17px;
+                }
+
+                h3.price-produto > span {
+                    background-color: var(--laranja);
+                    padding:  8px 10px;
+                    border-radius: 20px;
+                    color: beige;
+                }
+
+                .soma-produto {
+                    margin: 20px;
+
+                }
+
+                button {
+                    height: 50px;
+                    width: 70px;
+                    margin: 0 40px;
+                    color: beige;
+                    background-color: var(--marrom);
+                    border-radius: 20px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    border-radius: 5px;
+                    transition: .1s;
+                    background-color: var(--vermelho-claro);
+                }
+
+            </style>
+        </head>
+
+        <header>
+            <h2>App Lista de SuperMercado</h2>
+        </header>
+
+        <div class="lista-cadastro">
+            <input type="text" placeholder="Nome do produto..."
+            name="nome_produto" />
+            
+            <input type="number" step="0.01" title="This should be a number with up to 2 decimal places." placeholder="Valor do produto..." 
+            name="price" />
+
+            <input type="submit" name="acao" value="Cadastrar" />
+        </div>
+
+        <div class="lista-produtos">
+            
+        </div>
+    
+        <div class="soma-produto">  
+            <h1>Total: R$0</h1>
+        </div>
+
+        <button name="limpar">Limpar</button>
+
+        <script src="supermercado.js"></script>
+    </body>
+</html>
